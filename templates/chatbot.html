@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECIPE GENERATOR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+          <div class="chat-history">
+            <h3>Chat History</h3>
+            <div class="chat-list">
+              <!-- Chat history items will be added dynamically -->
+            </div>
+          </div>
+          <button class="new-chat-button">New Chat</button>
+        </div>
+        <div class="main-content">
+          <div class="chatbot-header">
+            <div class="chatbot-name">
+              <div class="icon-wrapper">
+                <span class="icon">R</span>
+              </div>
+              <h1 class="title">Chat<span class="highlight">RECIPE</span></h1>
+            </div>
+            <div class="user-profile">
+              <!-- <img src="static\img\user-avatar.jpg" alt="User Avatar" class="user-avatar"> -->
+              {% if current_user.is_authenticated %}
+              <span class="user-name">{{ current_user.username }}</span>
+              {% endif %}
+              <img src="static\img\user-avatar.jpg" alt="User Avatar" class="user-avatar">
+              <a href="{{ url_for('recipe.logout') }}" class="logout-btn">Logout</a>
+            </div>
+          </div>
+          <div class="conversation-area">
+            <!-- Chat messages between user and bot will be added dynamically -->
+          </div>
+          <div class="user-input-wrapper">
+    <div class="user-input">
+        <!-- Voice Recorder Button -->
+        <input type="checkbox" id="checkbox">
+        <label class="switchen" for="checkbox">
+            <div class="mic-on">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16">
+                    <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"></path>
+                    <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"></path>
+                </svg>
+            </div>
+        </label>
+        
+        <textarea id="userQuery" placeholder="Type your message..." rows="2"></textarea>
+        <button id="sendButton">
+            <div class="svg-wrapper-1">
+                <div class="svg-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                    </svg>
+                </div>
+            </div>
+            <span>Send</span>
+        </button>
+    </div>
+</div>
+
+        </div>
+      </div>
+
+      <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+</body>
+</html>
