@@ -3,7 +3,7 @@
 ## Overview
 ChatRecipe is an AI-powered recipe generation tool designed to deliver personalized culinary solutions. Utilizing advanced AI tool-calling (function calling) and integrating the Spoonacular API, this project provides users with detailed recipe suggestions, ingredient substitutes, conversational interactions, and transcription capabilities for audio input. Whether you're looking to explore new recipes, find ingredient alternatives, or chat hands-free, ChatRecipe adapts dynamically to your queries.
 
-## Project Image
+## Project Screenshot
 ![alt text](image.png)
 
 ## Key Features
