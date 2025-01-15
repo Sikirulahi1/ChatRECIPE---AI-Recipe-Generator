@@ -74,6 +74,7 @@ ChatRecipe is an AI-powered recipe generation tool designed to deliver personali
      pip install -r requirements.txt
      ```
 
+
 ## 3. Set Up API Keys
 
 To use the **ChatRecipe: The Recipe Generator** app, you will need API keys for Spoonacular, Hugging Face, OpenAI, and Cohere.
@@ -105,7 +106,7 @@ To use the **ChatRecipe: The Recipe Generator** app, you will need API keys for 
    ```bash
    flask run
    ```
-   Access the app at `http://127.0.0.1:5000/`.
+   Access the app at `http://127.0.0.1:5001/`.
 
 ## Usage
 1. Launch the application and interact with the chatbot interface.
